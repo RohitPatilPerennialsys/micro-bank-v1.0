@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "name": "Rohit Rahul",
+      "date": "1111-11-11",
+      "email": "R@123",
+      "password": "P@1234",
+      "services": [
+        {
+          "id": 1,
+          "name": "Current Account",
+          "rating": 1
+        },
+        {
+          "id": 2,
+          "name": "Payroll",
+          "rating": null
+        },
+        {
+          "id": 3,
+          "name": "Tax Payment",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Rohit Patil"
+    },
+    {
+      "id": 2,
+      "name": "rohit Patil",
+      "date": "1111-11-11",
+      "email": "R@1234",
+      "password": "P@123",
+      "services": [
+        {
+          "id": 1,
+          "name": "Current Account",
+          "rating": 2
+        },
+        {
+          "id": 2,
+          "name": "Payroll",
+          "rating": 4
+        },
+        {
+          "id": 3,
+          "name": "Tax Payment",
+          "rating": 1
+        }
+      ]
+    },
+    {
+      "name": "Tejas Patil",
+      "date": "1111-11-11",
+      "email": "Rohit@1234",
+      "password": "Patil@1234",
+      "id": 3,
+      "services": [
+        {
+          "id": 1,
+          "name": "Current Account",
+          "rating": 1
+        },
+        {
+          "id": 2,
+          "name": "Payroll",
+          "rating": 2
+        },
+        {
+          "id": 2,
+          "name": "Tax Payment",
+          "rating": 3
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "name": "Current Account"
+    },
+    {
+      "id": 2,
+      "name": "Payroll"
+    },
+    {
+      "id": 3,
+      "name": "Payment"
+    },
+    {
+      "id": 4,
+      "name": "Wallet"
+    },
+    {
+      "id": 5,
+      "name": "Investments"
+    },
+    {
+      "id": 6,
+      "name": "Tax Payment"
+    },
+    {
+      "id": 7,
+      "name": "Loans"
+    }
+  ]
+}
