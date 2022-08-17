@@ -1,9 +1,11 @@
 <template>
-  <heading></heading>
-  <div class="dash-title">Dashboard</div>
-  <navbarDashboard></navbarDashboard>
-  <transactionTable></transactionTable>
-  <footerDashboard></footerDashboard>
+  <div class="wrapper">
+    <heading></heading>
+    <div class="dash-title">Dashboard </div>
+    <navbarDashboard></navbarDashboard>
+    <transactionTable></transactionTable>
+    <footerDashboard></footerDashboard>
+  </div>
 </template>
 
 <script>
@@ -17,7 +19,7 @@ export default {
 </script>
 
 <style>
-.details-wrapper {
+.wrapper {
   background: #e5e5e5;
 }
 .dash-title {

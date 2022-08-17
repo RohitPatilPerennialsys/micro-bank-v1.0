@@ -2,15 +2,33 @@
   <div class="available-services-card">
     <h1>Available Services</h1>
     <div id="available-services-flex">
-      <div class="available-services">
-        <img src="../assets/images/Investments.svg" />
-        <p>Investments</p>
+      <div
+        class="available-services"
+        v-for="availableServices in displayAvailableServices"
+        :key="availableServices.id"
+      >
+        <img src="../assets/images/Loans.svg" />
+        <p>{{ availableServices.name }}</p>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  computed: {
+    displayAvailableServices() {
+      return this.$store.getters["allAvailableService"];
+    },
+  },
+  methods: {
+    displayAvailableService() {
+      this.$store.dispatch("allAvailableService");
+    },
+  },
+  created() {
+    this.displayAvailableService();
+  },
+};
 </script>
 
 <style>

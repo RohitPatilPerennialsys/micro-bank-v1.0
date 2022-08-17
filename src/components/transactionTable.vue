@@ -9,7 +9,7 @@
           <td>{{ i.status }}</td>
           <td>{{ i.action }}</td>
         </tr>
-        <tr v-for="i in datavalue" :key="i" :value="Rejected">
+        <tr v-for="i in datavalue" :key="i" >
           <td>{{ i.Transactionid }}</td>
           <td>{{ i.date }}</td>
           <td>{{ i.amount }}</td>

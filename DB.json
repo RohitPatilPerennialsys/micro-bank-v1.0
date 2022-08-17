@@ -75,36 +75,171 @@
           "rating": 3
         }
       ]
+    },
+    {
+      "name": "Test ",
+      "email": "R@123",
+      "date": "2022-08-20",
+      "password": "P@123",
+      "confirmPwd": "P@123",
+      "id": 4
+    },
+    {
+      "name": "Test2",
+      "email": "eee",
+      "date": "2022-08-27",
+      "password": "123",
+      "confirmPwd": "123",
+      "id": 5
+    },
+    {
+      "name": "Test2",
+      "email": "eee",
+      "date": "2022-08-27",
+      "password": "123",
+      "confirmPwd": "123",
+      "id": 6
+    },
+    {
+      "name": "123",
+      "email": "WWWW",
+      "date": "2022-08-26",
+      "password": "WWWW",
+      "confirmPwd": "WWWW",
+      "id": 7
+    },
+    {
+      "name": "qqqqq",
+      "email": "qqqqq",
+      "date": "2022-08-24",
+      "password": "qqqq",
+      "confirmPwd": "qqqq",
+      "id": 8
+    },
+    {
+      "name": "test",
+      "email": "test",
+      "date": "2022-08-25",
+      "password": "1234",
+      "confirmPwd": "1234",
+      "id": 9
+    },
+    {
+      "name": "test",
+      "email": "test",
+      "date": "2022-08-19",
+      "password": "321",
+      "confirmPwd": "321",
+      "id": 10
+    },
+    {
+      "name": "Rohit",
+      "email": "R@123",
+      "date": "2022-08-25",
+      "password": "111",
+      "confirmPwd": "111",
+      "id": 11
+    },
+    {
+      "name": "rrr",
+      "email": "q",
+      "date": "2022-09-02",
+      "password": "1",
+      "confirmPwd": "1",
+      "id": 12
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "date": "2022-08-19",
+      "password": "1",
+      "confirmPwd": "1",
+      "id": 13
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "date": "2022-08-19",
+      "password": "1",
+      "confirmPwd": "1",
+      "id": 14
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "date": "2022-08-27",
+      "password": "1",
+      "confirmPwd": "1",
+      "id": 15
+    },
+    {
+      "name": "1",
+      "email": "1",
+      "date": "2022-08-05",
+      "password": "1",
+      "confirmPwd": "1",
+      "id": 16
+    },
+    {
+      "name": "1",
+      "email": "12",
+      "date": "2022-08-19",
+      "password": "12",
+      "confirmPwd": "12",
+      "id": 17
+    },
+    {
+      "name": "123",
+      "email": "123",
+      "date": "2022-08-26",
+      "password": "123",
+      "confirmPwd": "123",
+      "id": 18
+    },
+    {
+      "name": "123",
+      "email": "1233",
+      "date": "2022-08-19",
+      "password": "1233",
+      "confirmPwd": "1233",
+      "id": 19
     }
   ],
   "services": [
     {
       "id": 1,
-      "name": "Current Account"
+      "name": "Current Account",
+      "imgURL": " require('@/assets/images/CurrentAccount.svg')"
     },
     {
       "id": 2,
-      "name": "Payroll"
+      "name": "Payroll",
+      "imgURL": "../assets/images/Payroll.svg"
     },
     {
       "id": 3,
-      "name": "Payment"
+      "name": "Payment",
+      "imgURL": "../assets/images/Payment.svg"
     },
     {
       "id": 4,
-      "name": "Wallet"
+      "name": "Wallet",
+      "imgURL": "../assets/images/Wallet.svg"
     },
     {
       "id": 5,
-      "name": "Investments"
+      "name": "Investments",
+      "imgURL": "../assets/images/Investments.svg"
     },
     {
       "id": 6,
-      "name": "Tax Payment"
+      "name": "Tax Payment",
+      "imgURL": "../assets/images/Tax Payment.svg"
     },
     {
       "id": 7,
-      "name": "Loans"
+      "name": "Loans",
+      "imgURL": "../assets/images/Loans.svg"
     }
   ]
 }

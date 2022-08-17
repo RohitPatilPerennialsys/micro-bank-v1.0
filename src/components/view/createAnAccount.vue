@@ -13,11 +13,13 @@ export default {
     createAccForm,
     microBankPoster,
   },
+  
 };
 </script>
 
 <style>
 .signup-page-wrapper {
+    background: #ffffff;
   display: flex;
   justify-content: center;
 }

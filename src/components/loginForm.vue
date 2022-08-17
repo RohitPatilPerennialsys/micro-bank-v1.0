@@ -5,15 +5,19 @@
       <p>Please login to your account</p>
       <form>
         <label class="login-email-or-Phone">Email or Phone</label>
-        <input type="text" class="input-container" v-model="inputUserEmail1" />
+        <input
+          type="text"
+          class="input-container"
+          v-model="logInuserInput.email"
+        />
         <label class="login-password">Password</label>
         <input
           type="password"
           class="input-container"
-          v-model="inputUserPassword"
+          v-model="logInuserInput.password"
         />
         <div class="forgot-pass">Forgot Password?</div>
-        <button class="login-Btn" id="submit">
+        <button @click.prevent="logIn()" class="login-Btn" id="submit">
           <h1>Login</h1>
         </button>
         <h3 class="exist-acc">
@@ -27,7 +31,20 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  data: () => {
+    return {
+      logInuserInput: { email: "", password: "" },
+    };
+  },
+  methods: {
+    logIn() {
+      this.$store.dispatch("logIn", this.logInuserInput);
+    },
+  },
+};
+</script>
 
 <style scoped>
 .log-in-form-container {

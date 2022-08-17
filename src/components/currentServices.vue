@@ -2,15 +2,33 @@
   <div class="current-services-card">
     <h1>Current Services</h1>
     <div id="current-services-flex">
-      <div class="current-service">
+      <div
+        class="current-service"
+        v-for="allCurrentServices in DisplayUserCurrentServices"
+        :key="allCurrentServices.id"
+      >
         <img src="../assets/images/CurrentAccount.svg" alt="" />
-        <p>Current Account</p>
+        <p>{{ allCurrentServices.name }}</p>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  computed: {
+    DisplayUserCurrentServices() {
+      return this.$store.getters["userAllCurrentServices"];
+    },
+  },
+  methods: {
+    DisplayUserAllCurrentService() {
+      this.$store.dispatch("getUserCurrentServices");
+    },
+  },
+  created() {
+    this.DisplayUserAllCurrentService();
+  },
+};
 </script>
 
 <style>

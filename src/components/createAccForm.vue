@@ -4,24 +4,24 @@
       <h1>Create an Account</h1>
       <form>
         <label class="sign-up-form-heading">Full Name</label>
-        <input type="text" class="input-container" v-model="userData.name" />
+        <input type="text" class="input-container" v-model="signInuserInput.name" />
         <label class="sign-up-form-heading">Date of Incorporation</label>
-        <input type="date" class="input-container" v-model="userData.date" />
+        <input type="date" class="input-container" v-model="signInuserInput.date" />
         <label class="sign-up-form-heading">Email</label>
-        <input type="email" class="input-container" v-model="userData.email" />
+        <input type="email" class="input-container" v-model="signInuserInput.email" />
         <label class="sign-up-form-heading">Password</label>
         <input
           type="password"
           class="input-container"
-          v-model="userData.password"
+          v-model="signInuserInput.password"
         />
         <label class="sign-up-form-heading">Confirm Password</label>
         <input
           type="password"
           class="input-container"
-          v-model="userData.confirmPwd"
+          v-model="signInuserInput.confirmPwd"
         />
-        <button class="Create-account-btn">
+        <button @click.prevent="signin()" class="Create-account-btn">
           <h1>Create an Account</h1>
         </button>
         <h3 class="existing-acc">
@@ -37,7 +37,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => {
+    return {
+      signInuserInput: { name: "", email: "", date: "", password: "", confirmPwd: "" },
+    };
+  },
+  methods: {
+    signin() {
+      this.$store.dispatch("signIn", this.signInuserInput);
+    },
+  },
+};
 </script>
 
 <style scoped>

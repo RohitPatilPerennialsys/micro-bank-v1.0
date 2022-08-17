@@ -1,6 +1,6 @@
 <template>
   <div class="login-page-wrapper">
-    <microBankPoster></microBankPoster>
+    <microBankPoster> </microBankPoster>
     <loginform></loginform>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
 
 <style>
 .login-page-wrapper {
+  background: #ffffff;
   display: flex;
   justify-content: center;
 }
