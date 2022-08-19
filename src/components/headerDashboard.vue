@@ -14,18 +14,45 @@
         <img src="../assets/images/notificationBellImg.svg" />
       </div>
       <div class="profile">
-        <p>RR</p>
+        <p>TT</p>
       </div>
-      <div class="drop-arrow">
-        <div><img src="../assets/images/dropArrowimg.svg" /></div>
+      <div class="drop-arrow" @click="test()">
+        <div>
+          <img src="../assets/images/dropArrowimg.svg" />
+        </div>
       </div>
     </div>
   </header>
+  <dashboardMenuOption v-if="awesome == true"></dashboardMenuOption>
 </template>
 
-<script></script>
+<script>
+import dashboardMenuOption from "./dashboardMenuOption.vue";
+export default {
+  components: {
+    dashboardMenuOption,
+  },
+  data() {
+    return {
+      awesome: false,
+    };
+  },
+  methods: {
+    test() {
+      if (this.awesome == false) {
+        this.awesome = true;
+      } else {
+        this.awesome = false;
+      }
+    },
+  },
+};
+</script>
 
-<style scoped>
+<style>
+dashboardMenuOption {
+  z-index: 1;
+}
 header {
   height: 72px;
   display: flex;
@@ -102,7 +129,7 @@ header {
   display: none;
   visibility: hidden;
 }
-@media screen and (min-width: 1016px) {
+@media screen and (min-width: 900px) {
   .drop-arrow {
     display: block;
     visibility: visible;

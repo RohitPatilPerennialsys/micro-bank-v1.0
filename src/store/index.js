@@ -4,22 +4,21 @@ import { createStore } from "vuex";
 
 const baseURL = " http://localhost:3000";
 export default createStore({
-  state() {
-    return {
-      userID: null,
-      signInuserInputResponse: {},
-      logInuserInputResponse: {},
-      availableService: [],
-      userCurrentService: [],
-      userAvailableService: [],
-    };
+  state: {
+    userID: null,
+    userDetails: [],
+    userCurrentService: [],
+    userAvailableService: [],
   },
   getters: {
-    allAvailableService(state) {
-      return state.availableService;
+    UserAllAvailableService(state) {
+      return state.userAvailableService;
     },
     userAllCurrentServices(state) {
       return state.userCurrentService;
+    },
+    userDetails(state) {
+      return state.userDetails;
     },
   },
   mutations: {
@@ -27,18 +26,16 @@ export default createStore({
       state.signInuserInputResponse = signInuserInput;
     },
     logInMutation(state, userID) {
-      state.userID = userID;
-    },
-    getAllAvailableservice(state, responseData) {
-      state.availableService = responseData;
-    },
-    getUserCurrentService(state, responseData) {
-      state.userCurrentService = responseData;
+      state.userID = userID.id;
+      state.userDetails.push(userID.name, userID.email);
+      state.userCurrentService = userID.services;
+      state.userAvailableService = userID.availableServices;
+      console.log(state);
     },
   },
 
   actions: {
-    signIn(context, signInuserInput) {
+    async signIn(context, signInuserInput) {
       if (
         signInuserInput.name === "" ||
         signInuserInput.email === "" ||
@@ -49,8 +46,8 @@ export default createStore({
         alert("Enter All Fields ");
       } else {
         console.log(signInuserInput);
-        const response = axios.post(baseURL + `/users`, signInuserInput);
-        const responseData = response.data;
+        const response = await axios.post(baseURL + `/users`, signInuserInput);
+        const responseData = await response.data;
         console.log(responseData);
         context.commit("signInMutation", signInuserInput);
         routes.push("/login");
@@ -58,8 +55,8 @@ export default createStore({
     },
     async logIn(context, logInuserInput) {
       if (logInuserInput.email !== "" && logInuserInput.password !== "") {
-        const response = await fetch(baseURL + `/users`);
-        const responseData = await response.json();
+        const response = await axios(baseURL + `/users`);
+        const responseData = await response.data;
         console.log(responseData);
         for (let id in responseData) {
           if (
@@ -69,36 +66,13 @@ export default createStore({
             console.log("OK");
             console.log("Successfully Login");
             routes.push("/DashboardSummary");
-            context.commit("logInMutation", responseData[id].id);
+            var payload = responseData[id];
+            context.commit("logInMutation", payload);
           }
         }
       } else {
         alert("Enter All Fields ");
       }
-
-      console.log(this.state);
-    },
-    async allAvailableService(context) {
-      const response = await axios.get(baseURL + `/services`);
-      const responseData = await response.data;
-      var allAvailableService = responseData;
-      context.commit("getAllAvailableservice", allAvailableService);
-    },
-    async getUserCurrentServices(context) {
-      const response = await axios(baseURL + `/users`);
-      const responseData = await response.data[this.state.userID].services;
-      console.log(this.state.availableService[0]);
-      context.commit("getUserCurrentService", responseData);
     },
   },
 });
-// for (let i = 0; i < this.state.availableService.length; i++) {
-//   for (let j = 0; j < this.state.userCurrentService.length; j++) {
-//     if (
-//       this.state.availableService.name[i] ==
-//       this.state.userCurrentService.name[j]
-//     ) {
-//       userAvailableService.name.splice(i, 1);
-//     }
-//   }
-// }

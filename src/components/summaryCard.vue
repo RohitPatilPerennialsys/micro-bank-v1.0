@@ -37,13 +37,13 @@ export default {
 </script>
 <style scoped>
 .summary-container {
-  height: 269px;
   margin: 12px 12px 0px 12px;
   background: #fff0f3;
   border: 1px solid rgba(217, 4, 41, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
+  padding-bottom: 20px;
 }
 .summary-container h1 {
   margin: 24px 225px 0px 24px;
@@ -87,14 +87,9 @@ h5 {
   line-height: 19px;
   color: #333333;
 }
-@media screen and (min-width: 698px) {
-  .summary-container {
-    height: 210px;
-  }
-}
+
 @media screen and (min-width: 1016px) {
   .summary-container {
-    height: 145px;
     margin-left: 24px;
     margin-right: 24px;
   }

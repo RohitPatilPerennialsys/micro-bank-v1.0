@@ -4,11 +4,23 @@
       <h1>Create an Account</h1>
       <form>
         <label class="sign-up-form-heading">Full Name</label>
-        <input type="text" class="input-container" v-model="signInuserInput.name" />
+        <input
+          type="text"
+          class="input-container"
+          v-model="signInuserInput.name"
+        />
         <label class="sign-up-form-heading">Date of Incorporation</label>
-        <input type="date" class="input-container" v-model="signInuserInput.date" />
+        <input
+          type="date"
+          class="input-container"
+          v-model="signInuserInput.date"
+        />
         <label class="sign-up-form-heading">Email</label>
-        <input type="email" class="input-container" v-model="signInuserInput.email" />
+        <input
+          type="email"
+          class="input-container"
+          v-model="signInuserInput.email"
+        />
         <label class="sign-up-form-heading">Password</label>
         <input
           type="password"
@@ -40,7 +52,50 @@
 export default {
   data: () => {
     return {
-      signInuserInput: { name: "", email: "", date: "", password: "", confirmPwd: "" },
+      signInuserInput: {
+        name: "",
+        email: "",
+        date: "",
+        password: "",
+        confirmPwd: "",
+        availableServices: [
+          {
+            id: 1,
+            name: "Current Account",
+            imgURL: "../assets/images/Current Account.svg",
+          },
+          {
+            id: 2,
+            name: "Payroll",
+            imgURL: "../assets/images/Payroll.svg",
+          },
+          {
+            id: 3,
+            name: "Payments",
+            imgURL: "../assets/images/Payments.svg",
+          },
+          {
+            id: 4,
+            name: "Wallet",
+            imgURL: "../assets/images/Wallet.svg",
+          },
+          {
+            id: 5,
+            name: "Investments",
+            imgURL: "../assets/images/Investments.svg",
+          },
+          {
+            id: 6,
+            name: "Tax Payment",
+            imgURL: "../assets/images/Tax Payment.svg",
+          },
+          {
+            id: 7,
+            name: "Loans",
+            imgURL: "../assets/images/Loans.svg",
+          },
+        ],
+      },
     };
   },
   methods: {

@@ -4,11 +4,14 @@
     <div id="available-services-flex">
       <div
         class="available-services"
-        v-for="availableServices in displayAvailableServices"
-        :key="availableServices.id"
+        v-for="allUserAvailableService in DisplayUserAvailableServices"
+        :key="allUserAvailableService.id"
       >
-        <img src="../assets/images/Loans.svg" />
-        <p>{{ availableServices.name }}</p>
+        <img
+          :src="allUserAvailableService.imgURL"
+          :alt="allUserAvailableService.name + 'IMG'"
+        />
+        <p>{{ allUserAvailableService.name }}</p>
       </div>
     </div>
   </div>
@@ -16,17 +19,9 @@
 <script>
 export default {
   computed: {
-    displayAvailableServices() {
-      return this.$store.getters["allAvailableService"];
+    DisplayUserAvailableServices() {
+      return this.$store.getters["UserAllAvailableService"];
     },
-  },
-  methods: {
-    displayAvailableService() {
-      this.$store.dispatch("allAvailableService");
-    },
-  },
-  created() {
-    this.displayAvailableService();
   },
 };
 </script>
@@ -52,6 +47,7 @@ export default {
   margin-inline-end: 0px;
 }
 #available-services-flex {
+  padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   align-content: center;

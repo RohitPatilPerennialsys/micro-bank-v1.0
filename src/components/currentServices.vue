@@ -7,7 +7,10 @@
         v-for="allCurrentServices in DisplayUserCurrentServices"
         :key="allCurrentServices.id"
       >
-        <img src="../assets/images/CurrentAccount.svg" alt="" />
+        <img
+          :src="allCurrentServices.imgURL"
+          :alt="allCurrentServices.name + 'IMG'"
+        />
         <p>{{ allCurrentServices.name }}</p>
       </div>
     </div>
@@ -19,14 +22,6 @@ export default {
     DisplayUserCurrentServices() {
       return this.$store.getters["userAllCurrentServices"];
     },
-  },
-  methods: {
-    DisplayUserAllCurrentService() {
-      this.$store.dispatch("getUserCurrentServices");
-    },
-  },
-  created() {
-    this.DisplayUserAllCurrentService();
   },
 };
 </script>
@@ -53,6 +48,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  padding-bottom: 20px;
 }
 .current-service {
   padding-top: 26.5px;
