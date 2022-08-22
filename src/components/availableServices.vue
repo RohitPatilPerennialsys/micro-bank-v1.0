@@ -8,7 +8,7 @@
         :key="allUserAvailableService.id"
       >
         <img
-          :src="allUserAvailableService.imgURL"
+          :src="require(`../assets/images/${allUserAvailableService.imgURL}`)"
           :alt="allUserAvailableService.name + 'IMG'"
         />
         <p>{{ allUserAvailableService.name }}</p>
@@ -20,7 +20,7 @@
 export default {
   computed: {
     DisplayUserAvailableServices() {
-      return this.$store.getters["UserAllAvailableService"];
+      return this.$store.getters["userAllAvailableService"];
     },
   },
 };
@@ -51,6 +51,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  align-items: baseline;
 }
 .available-services {
   margin-left: 14px;

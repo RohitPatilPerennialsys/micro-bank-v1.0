@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 0,
-      "name": "Test Test",
+      "name": "Rohit Patil",
       "date": "1111-11-11",
       "email": "R@1234",
       "password": "P@123",
@@ -11,41 +11,41 @@
           "id": 1,
           "name": "Current Account",
           "rating": 1,
-          "imgURL": "src/assets/images/CurrentAccount.svg"
+          "imgURL": "CurrentAccount.svg"
         },
         {
           "id": 2,
           "name": "Payroll",
           "rating": null,
-          "imgURL": "../assets/images/Payroll.svg"
+          "imgURL": "Payroll.svg"
         },
         {
           "id": 3,
           "name": "Tax Payment",
           "rating": 5,
-          "imgURL": "../assets/images/Tax Payment.svg"
+          "imgURL": "Tax Payment.svg"
         }
       ],
       "availableServices": [
         {
           "id": 1,
           "name": "Wallet",
-          "imgURL": "../assets/images/Wallet.svg"
+          "imgURL": "Wallet.svg"
         },
         {
           "id": 2,
           "name": "Investments",
-          "imgURL": "../assets/images/Investments.svg"
+          "imgURL": "Investments.svg"
         },
         {
           "id": 3,
           "name": "Payments",
-          "imgURL": "../assets/images/Payment.svg"
+          "imgURL": "Payment.svg"
         },
         {
           "id": 4,
           "name": "Loans",
-          "imgURL": "../assets/images/Loans.svg"
+          "imgURL": "Loans.svg"
         }
       ]
     },
@@ -59,41 +59,42 @@
         {
           "id": 1,
           "name": "Current Account",
-          "rating": 2
+          "rating": 2,
+          "imgURL": "CurrentAccount.svg"
         },
         {
           "id": 2,
           "name": "Payroll",
           "rating": 4,
-          "imgURL": "../assets/images/Payroll.svg"
+          "imgURL": "Payroll.svg"
         },
         {
           "id": 3,
           "name": "Tax Payment",
           "rating": 1,
-          "imgURL": "../assets/images/Tax Payment.svg"
+          "imgURL": "Tax Payment.svg"
         }
       ],
       "availableServices": [
         {
           "id": 1,
           "name": "Wallet",
-          "imgURL": "../assets/images/Wallet.svg"
+          "imgURL": "Wallet.svg"
         },
         {
           "id": 2,
           "name": "Investments",
-          "imgURL": "../assets/images/Investments.svg"
+          "imgURL": "Investments.svg"
         },
         {
           "id": 3,
           "name": "Payments",
-          "imgURL": "../assets/images/Payments.svg"
+          "imgURL": "Payment.svg"
         },
         {
           "id": 4,
           "name": "Loans",
-          "imgURL": "../assets/images/Loans.svg"
+          "imgURL": "Loans.svg"
         }
       ]
     }

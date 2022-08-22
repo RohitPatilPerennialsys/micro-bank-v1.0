@@ -14,16 +14,16 @@
         <img src="../assets/images/notificationBellImg.svg" />
       </div>
       <div class="profile">
-        <p>TT</p>
+        <p>{{ DisplayUserDetails[4] }}</p>
       </div>
-      <div class="drop-arrow" @click="test()">
+      <div class="drop-arrow" @click="dropDownMenu()">
         <div>
           <img src="../assets/images/dropArrowimg.svg" />
         </div>
       </div>
     </div>
   </header>
-  <dashboardMenuOption v-if="awesome == true"></dashboardMenuOption>
+  <dashboardMenuOption v-if="visible == true"></dashboardMenuOption>
 </template>
 
 <script>
@@ -34,16 +34,21 @@ export default {
   },
   data() {
     return {
-      awesome: false,
+      visible: false,
     };
   },
   methods: {
-    test() {
-      if (this.awesome == false) {
-        this.awesome = true;
+    dropDownMenu() {
+      if (this.visible == false) {
+        this.visible = true;
       } else {
-        this.awesome = false;
+        this.visible = false;
       }
+    },
+  },
+  computed: {
+    DisplayUserDetails() {
+      return this.$store.getters["userDetails"];
     },
   },
 };

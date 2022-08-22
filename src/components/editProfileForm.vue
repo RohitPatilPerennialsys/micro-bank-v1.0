@@ -134,6 +134,8 @@ form {
   background: white;
   box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+  margin: 25px;
+  margin-bottom: 55px;
 }
 
 .form-label {

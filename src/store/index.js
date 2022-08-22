@@ -5,13 +5,17 @@ import { createStore } from "vuex";
 const baseURL = " http://localhost:3000";
 export default createStore({
   state: {
+    authenticated: false,
     userID: null,
     userDetails: [],
     userCurrentService: [],
     userAvailableService: [],
   },
   getters: {
-    UserAllAvailableService(state) {
+    userAuthenticated(state) {
+      return state.authenticated;
+    },
+    userAllAvailableService(state) {
       return state.userAvailableService;
     },
     userAllCurrentServices(state) {
@@ -28,9 +32,18 @@ export default createStore({
     logInMutation(state, userID) {
       state.userID = userID.id;
       state.userDetails.push(userID.name, userID.email);
+      const userInitialLetter = userID.name
+        .split(" ")
+        .map((word) => word[0])
+        .join("");
+      state.userDetails.push(userID.name, userID.email, userInitialLetter);
       state.userCurrentService = userID.services;
       state.userAvailableService = userID.availableServices;
+      state.authenticated = userID.authenticated;
       console.log(state);
+    },
+    logoutAuthentication(state) {
+      state.authenticated = false;
     },
   },
 
@@ -65,8 +78,9 @@ export default createStore({
           ) {
             console.log("OK");
             console.log("Successfully Login");
-            routes.push("/DashboardSummary");
+            routes.replace({ name: "DashboardSummary" });
             var payload = responseData[id];
+            payload.authenticated = true;
             context.commit("logInMutation", payload);
           }
         }

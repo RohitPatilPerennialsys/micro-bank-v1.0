@@ -8,7 +8,7 @@
         :key="allCurrentServices.id"
       >
         <img
-          :src="allCurrentServices.imgURL"
+          :src="require(`../assets/images/${allCurrentServices.imgURL}`)"
           :alt="allCurrentServices.name + 'IMG'"
         />
         <p>{{ allCurrentServices.name }}</p>
@@ -48,6 +48,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
+  align-items: baseline;
   padding-bottom: 20px;
 }
 .current-service {

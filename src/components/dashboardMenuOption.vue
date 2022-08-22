@@ -2,7 +2,9 @@
   <div class="wrapper">
     <div class="dash-menu-options-container">
       <div class="dash-menu-options-wrapper">
-        <div class="profile-background"><p>TT</p></div>
+        <div class="profile-background">
+          <p>{{ DisplayUserDetails[4] }}</p>
+        </div>
         <div>
           <h1 class="full-name">{{ DisplayUserDetails[0] }}</h1>
           <h2 class="email">{{ DisplayUserDetails[1] }}</h2>
@@ -14,7 +16,10 @@
         <hr />
         <p class="dash-menu-options-label">Settings</p>
         <hr />
-        <router-link to="./login" class="dash-menu-options-label"
+        <router-link
+          @click="logout()"
+          to="./login"
+          class="dash-menu-options-label"
           >Logout</router-link
         >
       </div>
@@ -29,10 +34,15 @@ export default {
       return this.$store.getters["userDetails"];
     },
   },
+  methods: {
+    logout() {
+      this.$store.commit("logoutAuthentication");
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .wrapper {
   z-index: 1;
   position: relative;
