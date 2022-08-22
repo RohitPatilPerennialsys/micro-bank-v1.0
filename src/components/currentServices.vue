@@ -27,6 +27,8 @@ export default {
 </script>
 
 <style>
+.star {
+}
 .current-services-card {
   margin: 12px 12px 24px 12px;
   background: #ffffff;

@@ -16,7 +16,7 @@
         {
           "id": 2,
           "name": "Payroll",
-          "rating": null,
+          "rating": 0,
           "imgURL": "Payroll.svg"
         },
         {
