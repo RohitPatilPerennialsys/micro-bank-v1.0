@@ -9,7 +9,7 @@
           <td>{{ i.status }}</td>
           <td>{{ i.action }}</td>
         </tr>
-        <tr v-for="i in datavalue" :key="i" >
+        <tr v-for="i in datavalue" :key="i">
           <td>{{ i.Transactionid }}</td>
           <td>{{ i.date }}</td>
           <td>{{ i.amount }}</td>
@@ -17,7 +17,10 @@
             {{ i.status }}
           </td>
           <td>
-            <img src="../assets/images/eye-dash-2.svg" />
+            <img
+              class="view-transaction"
+              src="../assets/images/eye-dash-2.svg"
+            />
             <img
               class="download-img"
               src="../assets/images/download-dash-2.svg"
@@ -90,7 +93,7 @@ export default {
   display: flex;
 }
 .transaction-table-container {
-  margin-bottom: 169px;
+  margin-bottom: 210px;
   margin-left: 24px;
   margin-right: 24px;
   background: #ffffff;
@@ -157,5 +160,9 @@ th {
 }
 .download-img {
   padding-left: 15px;
+}
+.download-img,
+.view-transaction {
+  cursor: pointer;
 }
 </style>

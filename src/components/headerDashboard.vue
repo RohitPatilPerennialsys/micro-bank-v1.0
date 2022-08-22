@@ -11,14 +11,20 @@
     </div>
     <div class="header-right">
       <div class="bell">
-        <img src="../assets/images/notificationBellImg.svg" />
+        <img
+          class="notification-bell-img"
+          src="../assets/images/notificationBellImg.svg"
+        />
       </div>
       <div class="profile">
         <p>{{ DisplayUserDetails[4] }}</p>
       </div>
       <div class="drop-arrow" @click="dropDownMenu()">
         <div>
-          <img src="../assets/images/dropArrowimg.svg" />
+          <img
+            class="drop-down-header"
+            src="../assets/images/dropArrowimg.svg"
+          />
         </div>
       </div>
     </div>
@@ -134,11 +140,17 @@ header {
   display: none;
   visibility: hidden;
 }
+.notification-bell-img {
+  cursor: pointer;
+}
 @media screen and (min-width: 900px) {
   .drop-arrow {
     display: block;
     visibility: visible;
     padding-top: 25px;
+  }
+  .drop-down-header {
+    cursor: pointer;
   }
   .profile {
     margin-left: 26.02px;
