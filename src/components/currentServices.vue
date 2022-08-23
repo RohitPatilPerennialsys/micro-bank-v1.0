@@ -12,6 +12,15 @@
           :alt="allCurrentServices.name + 'IMG'"
         />
         <p>{{ allCurrentServices.name }}</p>
+        <div class="star-wrapper">
+          <div
+            :class="test1(allCurrentServices.rating, star)"
+            v-for="star in 5"
+            :key="star.id"
+          >
+            &#9733;
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -23,10 +32,38 @@ export default {
       return this.$store.getters["userAllCurrentServices"];
     },
   },
+  methods: {
+    test1(rating, totalStar) {
+      console.log(rating, totalStar, rating <= totalStar);
+      return rating >= totalStar ? "star" : "unstar";
+    },
+  },
 };
 </script>
 
 <style>
+.star-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.star,
+.unstar {
+  font-size: 27px;
+  border: rgba(0, 0, 0, 0.54);
+  background-color: unset;
+  color: #0a8b1f;
+  height: 21px;
+  padding-right: 0px;
+  padding-left: 3px;
+}
+.unstar {
+  color: grey;
+}
+.star:hover,
+.unstar:hover {
+  cursor: pointer;
+  color: #0a8b1f;
+}
 .current-services-card {
   margin: 12px 12px 24px 12px;
   background: #ffffff;
@@ -54,8 +91,11 @@ export default {
 .current-service {
   padding-top: 26.5px;
   margin-left: 24px;
-  width: 130px;
+  width: 140px;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .current-service p {
   padding-top: 15px;
@@ -68,7 +108,9 @@ export default {
   margin-inline-end: 0px;
 }
 .current-service img {
-  padding: 2.5px 77.5px 0px 0px;
+  width: 48px;
+  padding-right: 0px;
+  height: 56px;
 }
 
 @media screen and (min-width: 1016px) {
@@ -80,9 +122,6 @@ export default {
     width: 218px;
     height: 123px;
     padding-top: 24px;
-  }
-  .current-service img {
-    padding: 2.5px 86.5px 0px 84px;
   }
   .current-service p {
     text-align: center;

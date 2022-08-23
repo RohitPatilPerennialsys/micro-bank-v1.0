@@ -54,14 +54,15 @@ export default {
   align-items: baseline;
 }
 .available-services {
+  display: flex;
   margin-left: 14px;
   padding-top: 24px;
   width: 144px;
   margin-bottom: 15px;
+  flex-direction: column;
+  align-items: center;
 }
-.available-services img {
-  padding: 15px 86.5px 0px 2.5px;
-}
+
 .available-services p {
   padding-top: 15px;
   font-size: 18px;
