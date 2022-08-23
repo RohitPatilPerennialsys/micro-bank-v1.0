@@ -137,18 +137,14 @@ header {
   margin-inline-end: 0px;
 }
 .drop-arrow {
-  display: none;
-  visibility: hidden;
+  display: block;
+  visibility: visible;
+  padding-top: 25px;
 }
 .notification-bell-img {
   cursor: pointer;
 }
 @media screen and (min-width: 900px) {
-  .drop-arrow {
-    display: block;
-    visibility: visible;
-    padding-top: 25px;
-  }
   .drop-down-header {
     cursor: pointer;
   }
