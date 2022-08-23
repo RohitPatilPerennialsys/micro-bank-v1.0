@@ -14,7 +14,7 @@
         <p>{{ allCurrentServices.name }}</p>
         <div class="star-wrapper">
           <div
-            :class="test1(allCurrentServices.rating, star)"
+            :class="ratingcal(allCurrentServices.rating, star)"
             v-for="star in 5"
             :key="star.id"
           >
@@ -33,8 +33,7 @@ export default {
     },
   },
   methods: {
-    test1(rating, totalStar) {
-      console.log(rating, totalStar, rating <= totalStar);
+    ratingcal(rating, totalStar) {
       return rating >= totalStar ? "star" : "unstar";
     },
   },
