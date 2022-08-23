@@ -5,7 +5,7 @@
       <form>
         <label class="sign-up-form-heading">Full Name</label>
         <input
-          type="text"
+          type="name"
           class="input-container"
           v-model="signInuserInput.name"
         />
@@ -62,37 +62,37 @@ export default {
           {
             id: 1,
             name: "Current Account",
-            imgURL: "../assets/images/Current Account.svg",
+            imgURL: "CurrentAccount.svg",
           },
           {
             id: 2,
             name: "Payroll",
-            imgURL: "../assets/images/Payroll.svg",
+            imgURL: "Payroll.svg",
           },
           {
             id: 3,
             name: "Payments",
-            imgURL: "../assets/images/Payments.svg",
+            imgURL: "Payment.svg",
           },
           {
             id: 4,
             name: "Wallet",
-            imgURL: "../assets/images/Wallet.svg",
+            imgURL: "Wallet.svg",
           },
           {
             id: 5,
             name: "Investments",
-            imgURL: "../assets/images/Investments.svg",
+            imgURL: "Investments.svg",
           },
           {
             id: 6,
             name: "Tax Payment",
-            imgURL: "../assets/images/Tax Payment.svg",
+            imgURL: "Tax Payment.svg",
           },
           {
             id: 7,
             name: "Loans",
-            imgURL: "../assets/images/Loans.svg",
+            imgURL: "Loans.svg",
           },
         ],
       },

@@ -6,7 +6,7 @@
       <form>
         <label class="login-email-or-Phone">Email or Phone</label>
         <input
-          type="text"
+          type="email"
           class="input-container"
           v-model="logInuserInput.email"
         />

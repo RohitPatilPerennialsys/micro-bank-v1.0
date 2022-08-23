@@ -97,6 +97,141 @@
           "imgURL": "Loans.svg"
         }
       ]
+    },
+    {
+      "name": "123",
+      "email": "r@123",
+      "date": "2022-08-19",
+      "password": "q@123",
+      "confirmPwd": "q@123",
+      "availableServices": [
+        {
+          "id": 1,
+          "name": "Current Account",
+          "imgURL": "../assets/images/Current Account.svg"
+        },
+        {
+          "id": 2,
+          "name": "Payroll",
+          "imgURL": "../assets/images/Payroll.svg"
+        },
+        {
+          "id": 3,
+          "name": "Payments",
+          "imgURL": "../assets/images/Payments.svg"
+        },
+        {
+          "id": 4,
+          "name": "Wallet",
+          "imgURL": "../assets/images/Wallet.svg"
+        },
+        {
+          "id": 5,
+          "name": "Investments",
+          "imgURL": "../assets/images/Investments.svg"
+        },
+        {
+          "id": 6,
+          "name": "Tax Payment",
+          "imgURL": "../assets/images/Tax Payment.svg"
+        },
+        {
+          "id": 7,
+          "name": "Loans",
+          "imgURL": "../assets/images/Loans.svg"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "rohit patilll",
+      "email": "R@123",
+      "date": "2022-08-12",
+      "password": "R@123",
+      "confirmPwd": "R@123",
+      "availableServices": [
+        {
+          "id": 1,
+          "name": "Current Account",
+          "imgURL": "CurrentAccount.svg"
+        },
+        {
+          "id": 2,
+          "name": "Payroll",
+          "imgURL": "Payroll.svg"
+        },
+        {
+          "id": 3,
+          "name": "Payments",
+          "imgURL": "Payments.svg"
+        },
+        {
+          "id": 4,
+          "name": "Wallet",
+          "imgURL": "Wallet.svg"
+        },
+        {
+          "id": 5,
+          "name": "Investments",
+          "imgURL": "Investments.svg"
+        },
+        {
+          "id": 6,
+          "name": "Tax Payment",
+          "imgURL": "Tax Payment.svg"
+        },
+        {
+          "id": 7,
+          "name": "Loans",
+          "imgURL": "Loans.svg"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "name": "Q@123",
+      "email": "Q@123",
+      "date": "2022-08-27",
+      "password": "Q@123",
+      "confirmPwd": "Q@123",
+      "availableServices": [
+        {
+          "id": 1,
+          "name": "Current Account",
+          "imgURL": "CurrentAccount.svg"
+        },
+        {
+          "id": 2,
+          "name": "Payroll",
+          "imgURL": "Payroll.svg"
+        },
+        {
+          "id": 3,
+          "name": "Payments",
+          "imgURL": "Payment.svg"
+        },
+        {
+          "id": 4,
+          "name": "Wallet",
+          "imgURL": "Wallet.svg"
+        },
+        {
+          "id": 5,
+          "name": "Investments",
+          "imgURL": "Investments.svg"
+        },
+        {
+          "id": 6,
+          "name": "Tax Payment",
+          "imgURL": "Tax Payment.svg"
+        },
+        {
+          "id": 7,
+          "name": "Loans",
+          "imgURL": "Loans.svg"
+        }
+      ],
+      "id": 4
     }
   ]
 }
