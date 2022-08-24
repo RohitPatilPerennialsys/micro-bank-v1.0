@@ -8,30 +8,35 @@
           type="name"
           class="input-container"
           v-model="signInuserInput.name"
+          data-test="full-name-input"
         />
         <label class="sign-up-form-heading">Date of Incorporation</label>
         <input
           type="date"
           class="input-container"
           v-model="signInuserInput.date"
+          data-test="date-input"
         />
         <label class="sign-up-form-heading">Email</label>
         <input
           type="email"
           class="input-container"
           v-model="signInuserInput.email"
+           data-test="email-input"
         />
         <label class="sign-up-form-heading">Password</label>
         <input
           type="password"
           class="input-container"
           v-model="signInuserInput.password"
+           data-test="password-input"
         />
         <label class="sign-up-form-heading">Confirm Password</label>
         <input
           type="password"
           class="input-container"
           v-model="signInuserInput.confirmPwd"
+           data-test="confirm-password-input"
         />
         <button @click.prevent="signin()" class="Create-account-btn">
           <h1>Create an Account</h1>

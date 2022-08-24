@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import store from "@/store";
 import DashboardSummary from "../components/view/dashboardSummary.vue";
 import DashboardDetails from "../components/view/dashboardDetails.vue";
-import createAnAccount from "../components/view/createAnAccount.vue";
+import createAnAccount from "../components/view/signIn.vue";
 import LoginAcc from "../components/view/loginAcc.vue";
 // import editProfile from "../components/view/editProfile.vue";
 import notFound from "../components/view/notFoundPage.vue";

@@ -9,12 +9,16 @@
           type="email"
           class="input-container"
           v-model="logInuserInput.email"
+          data-test="email-input"
+          required
         />
         <label class="login-password">Password</label>
         <input
           type="password"
           class="input-container"
           v-model="logInuserInput.password"
+          data-test="password-input"
+          required
         />
         <div class="forgot-pass">Forgot Password?</div>
         <button @click.prevent="logIn()" class="login-Btn" id="submit">
@@ -66,17 +70,22 @@ export default {
   color: #d90429;
   text-decoration: none;
 }
-.login-email-or-Phone {
-  padding-top: 32px;
-  margin: 0px;
-}
+
 .login-password {
   padding-top: 24px;
   margin: 0px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: flex-end;
+  color: #1a1a1a;
 }
-.login-password,
+
 .login-email-or-Phone {
   font-weight: bold;
+  padding-top: 32px;
+  margin: 0px;
   font-size: 14px;
   line-height: 19px;
   margin: 0px;
