@@ -112,7 +112,7 @@ export default {
   height: 56px;
 }
 
-@media screen and (min-width: 1016px) {
+@media screen and (min-width: 1080px) {
   .current-services-card {
     margin-left: 24px;
     margin-right: 24px;

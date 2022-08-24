@@ -15,12 +15,12 @@
 </template>
 
 <script>
-import heading from "../headerDashboard.vue";
-import Navbar from "../navbarDashboard.vue";
-import SummaryCard from "../summaryCard.vue";
-import CurrentServices from "../currentServices.vue";
-import AvailableServices from "../availableServices.vue";
-import Footer from "../footerDashboard.vue";
+import heading from "../HeaderDashboard.vue";
+import Navbar from "../NavbarDashboard.vue";
+import SummaryCard from "../SummaryCard.vue";
+import CurrentServices from "../CurrentServices.vue";
+import AvailableServices from "../AvailableServices.vue";
+import Footer from "../FooterDashboard.vue";
 
 export default {
   components: {

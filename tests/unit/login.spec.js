@@ -1,12 +1,12 @@
 import { expect } from "chai";
-import { mount } from "@vue/test-utils";
-import loginForm from "@/components/loginForm.vue";
-import createAnAccount from "@/components/view/loginAcc.vue";
+import { shallowMount } from "@vue/test-utils";
+import loginForm from "@/components/LoginForm.vue";
+import createAnAccount from "@/components/view/LoginAcc.vue";
 
 //Micro Bank Poster
 describe("loginAcc.vue", () => {
   it("Visibility of MicroBankPoster Component ", () => {
-    const wrapper = mount(createAnAccount);
+    const wrapper = shallowMount(createAnAccount);
     expect(wrapper.isVisible);
   });
 });
@@ -14,14 +14,14 @@ describe("loginAcc.vue", () => {
 //login Form
 describe("loginForm.vue", () => {
   it("Visibility of loginForm Component ", () => {
-    const wrapper = mount(loginForm);
+    const wrapper = shallowMount(loginForm);
     expect(wrapper.isVisible);
   });
 });
 
 describe("loginForm.vue", () => {
   it("All inner text in Login Form", () => {
-    const wrapper = mount(loginForm);
+    const wrapper = shallowMount(loginForm);
     const loginAcutualInnerText = [
       "Login",
       "Please login to your accoun",
@@ -42,7 +42,7 @@ describe("loginForm.vue", () => {
 
 describe("loginForm.vue", () => {
   it("Input fields and Log In Button visibility and Click", () => {
-    const wrapper = mount(loginForm);
+    const wrapper = shallowMount(loginForm);
     const visibilityEmailInoutField = wrapper.get('[data-test="email-input"]');
     const visibilityPasswordInoutField = wrapper.get(
       '[data-test="password-input"]'
@@ -58,7 +58,7 @@ describe("loginForm.vue", () => {
 
 describe("loginForm.vue", () => {
   it("Login Btn visibility", () => {
-    const wrapper = mount(loginForm);
+    const wrapper = shallowMount(loginForm);
     const loginBtn = wrapper.get("button", ".login-Btn");
     expect(loginBtn.isVisible);
   });

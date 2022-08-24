@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { mount } from "@vue/test-utils";
-import SignInForm from "@/components/createAccForm.vue";
+import SignInForm from "@/components/CreateAccForm.vue";
 import SignIn from "@/components/view/SignIn.vue";
 //Micro Bank Poster
 describe("SignIn.vue", () => {

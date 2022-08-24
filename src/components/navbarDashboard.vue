@@ -59,7 +59,7 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
-@media screen and (min-width: 1016px) {
+@media screen and (min-width: 1080px) {
   .navigation-bar {
     margin-left: 24px;
     margin-right: 24px;

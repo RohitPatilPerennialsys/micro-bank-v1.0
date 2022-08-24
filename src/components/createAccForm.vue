@@ -3,35 +3,35 @@
     <div class="sign-up-form-container">
       <h1>Create an Account</h1>
       <form>
-        <label class="sign-up-form-heading">Full Name</label>
+        <label for="full-name" class="sign-up-form-heading">Full Name</label>
         <input
           type="name"
           class="input-container"
           v-model="signInuserInput.name"
           data-test="full-name-input"
         />
-        <label class="sign-up-form-heading">Date of Incorporation</label>
+        <label for="date-of-incorporation" class="sign-up-form-heading">Date of Incorporation</label>
         <input
           type="date"
           class="input-container"
           v-model="signInuserInput.date"
           data-test="date-input"
         />
-        <label class="sign-up-form-heading">Email</label>
+        <label for="email" class="sign-up-form-heading">Email</label>
         <input
           type="email"
           class="input-container"
           v-model="signInuserInput.email"
            data-test="email-input"
         />
-        <label class="sign-up-form-heading">Password</label>
+        <label for="password" class="sign-up-form-heading">Password</label>
         <input
           type="password"
           class="input-container"
           v-model="signInuserInput.password"
            data-test="password-input"
         />
-        <label class="sign-up-form-heading">Confirm Password</label>
+        <label for="confirm-password" class="sign-up-form-heading">Confirm Password</label>
         <input
           type="password"
           class="input-container"
@@ -195,7 +195,7 @@ export default {
   color: #d90429;
   text-decoration: none;
 }
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1080px) {
   .sign-up-form-container {
     margin: 110px 181px 62px 182px;
   }

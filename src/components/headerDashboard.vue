@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import dashboardMenuOption from "./dashboardMenuOption.vue";
+import dashboardMenuOption from "./DashboardMenuOption.vue";
 export default {
   components: {
     dashboardMenuOption,

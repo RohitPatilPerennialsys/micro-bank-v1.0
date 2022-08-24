@@ -1,7 +1,7 @@
 <template>
   <div class="available-services-card">
     <h1>Available Services</h1>
-    <div id="available-services-flex">
+    <div class="available-services-flex">
       <div
         class="available-services"
         v-for="allUserAvailableService in DisplayUserAvailableServices"
@@ -28,7 +28,7 @@ export default {
 
 <style>
 .available-services-card {
-  margin: 24px 12px 24px 12px;
+  margin: 24px 12px;
   background: #ffffff;
   box-shadow: 0px 1px 5px rgb(0 0 0 / 12%);
   border-radius: 12px;
@@ -46,7 +46,7 @@ export default {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-#available-services-flex {
+.available-services-flex {
   padding-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -74,9 +74,9 @@ export default {
   margin-inline-end: 0px;
 }
 
-@media screen and (min-width: 1016px) {
+@media screen and (min-width: 1080px) {
   .available-services-card {
-    margin: 24px 24px 24px 24px;
+    margin: 24px;
   }
   .available-services {
     width: 218px;

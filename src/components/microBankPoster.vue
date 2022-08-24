@@ -3,7 +3,7 @@
 </template>
 
 <style scoped>
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1080px) {
   .bank-logo {
     flex: 50%;
     height: 925px;

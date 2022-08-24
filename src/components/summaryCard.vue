@@ -88,7 +88,7 @@ h5 {
   color: #333333;
 }
 
-@media screen and (min-width: 1016px) {
+@media screen and (min-width: 1080px) {
   .summary-container {
     margin-left: 24px;
     margin-right: 24px;

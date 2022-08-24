@@ -18,30 +18,30 @@
           </div>
         </div>
 
-        <label class="form-label">Company Name</label>
+        <label for="company-name" class="form-label">Company Name</label>
         <input
           type="text"
           class="input-container"
           v-model="userData.companyname"
         />
-        <label class="form-label">Email Address</label>
+        <label for="email-address" class="form-label">Email Address</label>
         <input type="email" class="input-container" v-model="userData.email" />
 
-        <label class="form-label">Old Password</label>
+        <label for="old-password" class="form-label">Old Password</label>
         <input
           type="password"
           class="input-container"
           v-model="userData.oldPassword"
         />
 
-        <label class="form-label">New Password</label>
+        <label for="new-password" class="form-label">New Password</label>
         <input
           type="password"
           class="input-container"
           v-model="userData.newPassword"
         />
 
-        <label class="form-label">Confirm Password</label>
+        <label for="confirm-password" class="form-label">Confirm Password</label>
         <input
           type="password"
           class="input-container"

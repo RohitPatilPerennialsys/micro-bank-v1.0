@@ -4,7 +4,7 @@
       <h1>Login</h1>
       <p>Please login to your account</p>
       <form>
-        <label class="login-email-or-Phone">Email or Phone</label>
+        <label for="email-or-phone" class="login-email-or-Phone">Email or Phone</label>
         <input
           type="email"
           class="input-container"
@@ -12,7 +12,7 @@
           data-test="email-input"
           required
         />
-        <label class="login-password">Password</label>
+        <label for="password" class="login-password">Password</label>
         <input
           type="password"
           class="input-container"
@@ -156,7 +156,7 @@ export default {
   margin-left: 10px;
   margin-right: 49px;
 }
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1080px) {
   .log-in-form-container {
     margin: 110px 181px 62px 182px;
   }

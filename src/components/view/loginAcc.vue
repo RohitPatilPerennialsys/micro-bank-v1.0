@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import microBankPoster from "../microBankPoster.vue";
-import loginform from "../loginForm.vue";
+import microBankPoster from "../MicroBankPoster.vue";
+import loginform from "../LoginForm.vue";
 export default {
   components: {
     microBankPoster,

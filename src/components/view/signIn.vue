@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import createAccForm from "../createAccForm.vue";
-import microBankPoster from "../microBankPoster.vue";
+import createAccForm from "../CreateAccForm.vue";
+import microBankPoster from "../MicroBankPoster.vue";
 export default {
   components: {
     createAccForm,

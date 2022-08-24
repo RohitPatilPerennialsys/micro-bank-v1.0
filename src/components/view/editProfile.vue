@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import heading from "../headerDashboard.vue";
-import editProfileForm from "../editProfileForm.vue";
-import footerDashboard from "../footerDashboard.vue";
+import heading from "../HeaderDashboard.vue";
+import editProfileForm from "../EditProfileForm.vue";
+import footerDashboard from "../FooterDashboard.vue";
 export default {
   components: {
     heading,

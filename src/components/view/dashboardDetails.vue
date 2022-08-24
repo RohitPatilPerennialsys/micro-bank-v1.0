@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import heading from "../headerDashboard.vue";
-import navbarDashboard from "../navbarDashboard.vue";
-import transactionTable from "../transactionTable.vue";
-import footerDashboard from "../footerDashboard.vue";
+import heading from "../HeaderDashboard.vue";
+import navbarDashboard from "../NavbarDashboard.vue";
+import transactionTable from "../TransactionTable.vue";
+import footerDashboard from "../FooterDashboard.vue";
 export default {
   components: { heading, navbarDashboard, transactionTable, footerDashboard },
 };

@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import store from "@/store";
-import DashboardSummary from "../components/view/dashboardSummary.vue";
-import DashboardDetails from "../components/view/dashboardDetails.vue";
-import createAnAccount from "../components/view/signIn.vue";
-import LoginAcc from "../components/view/loginAcc.vue";
-// import editProfile from "../components/view/editProfile.vue";
-import notFound from "../components/view/notFoundPage.vue";
+import DashboardSummary from "../components/view/DashboardSummary.vue";
+import DashboardDetails from "../components/view/DashboardDetails.vue";
+import createAnAccount from "../components/view/SignIn.vue";
+import LoginAcc from "../components/view/LoginAcc.vue";
+import editProfile from "../components/view/EditProfile.vue";
+import notFound from "../components/view/NotFoundPage.vue";
 
 export default createRouter({
   history: createWebHistory(),
@@ -38,18 +38,18 @@ export default createRouter({
       },
     },
     { path: "/:NotFound(.*)*", component: notFound },
-    // ,
-    // {
-    //   path: "/editProfile",
-    //   component: editProfile,
-    //   name: "editProfile",
-    //   beforeEnter: (to, from, next) => {
-    //     if (store.state.authenticated == false) {
-    //       next("/Login");
-    //     } else {
-    //       next();
-    //     }
-    //   },
-    // },
+
+    {
+      path: "/editProfile",
+      component: editProfile,
+      name: "editProfile",
+      beforeEnter: (to, from, next) => {
+        if (store.state.authenticated == false) {
+          next("/Login");
+        } else {
+          next();
+        }
+      },
+    },
   ],
 });
